@@ -16,3 +16,13 @@
           - tar
           - curl
           - autotools-dev
+          - wine
+          - libimage-exiftool-perl
+          - perl-doc
+          - clamav
+          - clamav-freshclam
+          - unrar
+          - python-m2crypto
+          - python-pyasn1
+          - libimage-exiftool-perl
+          - perl-doc
