@@ -16,3 +16,25 @@ yara extract:
           tar xvzf yara.tar.gz
     - require:
         - cmd: yara download
+
+yara dependencies:
+  cmd:
+    - run
+    - cwd: /home/vagrant/yara-3.4.0
+    - name: >
+          sudo ./bootstrap.sh &&
+          sudo ./configure &&
+          sudo make &&
+          sudo make install
+    - require:
+        - cmd: yara extract
+
+yara python:
+  cmd:
+    - run
+    - cwd: /home/vagrant/yara-3.4.0/yara-python
+    - name: >
+          python setup.py build &&
+          sudo python setup.py install
+    - require:
+        - cmd: yara dependencies
