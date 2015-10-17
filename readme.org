@@ -1,0 +1,6 @@
+#+title: ragpicker prototype
+#+author: intelemetry
+
+* Setup instructions 
+** $ vagrant up 
+** $ vagrant provision 
