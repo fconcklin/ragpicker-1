@@ -3,3 +3,4 @@
       - names:
           - htop
           - strace
+          - git
