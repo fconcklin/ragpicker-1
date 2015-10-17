@@ -8,8 +8,8 @@
 
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "debian/jessie64"
- config.vm.box_check_update = true
+  config.vm.box = "hashicorp/precise32"
+  config.vm.box_check_update = true
   # config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Create a private network, which allows host-only access to the machine
@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "salt/roots", "/srv/salt"
+  # config.vm.synced_folder "salt/roots", "/srv/salt"
 
 
   # Provider-specific configuration so you can fine-tune various
@@ -43,10 +43,13 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
 
- 
- 
+  
+  
   config.vm.provision :salt do |salt|
-    salt.minion_config = "salt/minion"
+    salt.minion_config = "saltstack/etc/minion"
     salt.run_highstate = true
-end
+    salt.install_type = "git"
+    salt.install_args = "v2014.1.0"
+    salt.verbose = true
+  end
 end
