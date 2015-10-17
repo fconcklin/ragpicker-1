@@ -1,4 +1,9 @@
-bootstrap:
-  cmd.run:
-      - name: curl -L https://malware-crawler.googlecode.com/svn/MalwareCrawler/versions/ragpicker_v0.05.2.tar.gz
-          - creates: /opt/ragpicker
+master: localhost
+
+
+file_client: local
+
+file_roots:
+base:
+- /vagrant/salt/roots
+
