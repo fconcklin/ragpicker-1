@@ -1,5 +1,5 @@
-common_packages:
-pkg.installed:
-- names:
-- htop
-- strace
+  common_packages:
+    pkg.installed:
+      - names:
+          - htop
+          - strace
