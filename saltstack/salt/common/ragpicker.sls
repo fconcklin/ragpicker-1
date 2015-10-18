@@ -19,4 +19,13 @@ ragpicker latest source code:
     - require:
         - cmd: ragpicker repository clone
 
-      
+ragpicker install:
+  cmd:
+    - run
+    - unless: test -d /opt/ragpicker
+    - cwd: /home/vagrant/malware-crawler
+    - name: >
+          sudo mkdir /opt/ragpicker &&
+          sudo ant install
+    - require:
+        - cmd: pip dependencies
