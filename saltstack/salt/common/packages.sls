@@ -1,14 +1,16 @@
   common_packages:
     pkg.installed:
       - names:
-          - htop
+          - autoconf
           - strace
           - git
           - ant
           - build-essential
+          - libtool
           - python-dev
           - gcc
           - automake
+          - htop
           - libtool
           - python-pip
           - subversion

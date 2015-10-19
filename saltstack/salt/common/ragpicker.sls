@@ -29,3 +29,6 @@ ragpicker install:
           sudo ant install
     - require:
         - cmd: pip dependencies
+        - cmd: ragpicker latest source code
+    - require:
+        - pkg: autoconf

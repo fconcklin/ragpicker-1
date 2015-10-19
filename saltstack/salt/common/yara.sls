@@ -28,6 +28,9 @@ yara dependencies:
           sudo make install
     - require:
         - cmd: yara extract
+    - require:
+        - pkg: autoconf
+	- pkg: libtool
 
 yara python:
   cmd:
