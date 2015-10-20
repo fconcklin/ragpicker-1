@@ -30,7 +30,8 @@ yara dependencies:
         - cmd: yara extract
     - require:
         - pkg: autoconf
-	- pkg: libtool
+    - require:
+        - pkg: libtool
 
 yara python:
   cmd:
