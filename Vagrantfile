@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
 
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"          # customize memory
+    vb.memory = "4096"          # customize memory
   end
 
   config.vm.provision :salt do |salt|

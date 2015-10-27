@@ -1,5 +1,5 @@
   include:
-    - common.hardening
+    # - common.hardening
     - common.packages
     - common.pipdeps
     - common.yara
