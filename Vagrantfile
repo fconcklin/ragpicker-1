@@ -4,9 +4,13 @@
 
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "hashicorp/precise32"
+  config.vm.box = "ubuntu/trusty32"
   config.vm.provider :libvirt do |libvirt|
-    libvirt.driver = "kvm"
+    libvirt.uri = 'qemu+unix:///system'
+    libvirt.host = 'virtualized'
+    libvirt.memory=1024
+    libvirt.cpus=1
+    libvirt.driver = "qemu"
     libvirt.connect_via_ssh = false
     libvirt.username = "root"
     libvirt.storage_pool_name = "default"

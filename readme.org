@@ -2,5 +2,6 @@
 #+author: intelemetry
 
 * Setup instructions 
+** vagrant mutate trusty32 box to libvirt
 ** $ vagrant up 
 ** $ vagrant provision 
